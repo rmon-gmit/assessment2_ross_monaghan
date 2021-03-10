@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Employee.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assessment2_Ross_Monaghan</a> &gt; <a href="index.source.html" class="el_package">ie.gmit.tests</a> &gt; <span class="el_source">Employee.java</span></div><h1>Employee.java</h1><pre class="source lang-java linenums">/*
+ * Description: Class to represent an employee
+ * Author(s): Ross Monaghan
+ * Version: 1.0
+ * Date Created: 10/03/21
+ */
+
+package ie.gmit.tests;
+
+public class Employee
+{
+    private String name;
+    private String employeeNum;
+
+    // Argument Constructor
+    public Employee(String name, String employeeNum)
+<span class="fc" id="L17">    {</span>
+<span class="fc" id="L18">        setName(name);</span>
+<span class="fc" id="L19">        setEmployeeNum(employeeNum);</span>
+<span class="fc" id="L20">    }</span>
+
+    // Mutators
+    public void setName(String name)
+    {
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        if (name.length()&gt;=5) {</span>
+<span class="fc" id="L26">            this.name = name;</span>
+        }
+        else {
+<span class="fc" id="L29">            throw new IllegalArgumentException(&quot;Invalid name entry&quot;);</span>
+        }
+<span class="fc" id="L31">    }</span>
+
+    public void setEmployeeNum(String employeeNum)
+    {
+<span class="fc bfc" id="L35" title="All 2 branches covered.">        if (employeeNum.length()==5) {</span>
+<span class="fc" id="L36">            this.employeeNum = employeeNum;</span>
+        }
+        else {
+<span class="fc" id="L39">            throw new IllegalArgumentException(&quot;Employee number must be 5 digits&quot;);</span>
+        }
+<span class="fc" id="L41">    }</span>
+
+    // Accessors
+    public String getName()
+    {
+<span class="fc" id="L46">        return name;</span>
+    }
+
+    public String getEmployeeNum()
+    {
+<span class="fc" id="L51">        return employeeNum;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
